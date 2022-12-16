@@ -2,9 +2,33 @@ body{
   margin: 0;
 }
 .container{
-    display: flex;
+    display: block;
  
 }
+.menu{
+    float: left;
+    padding-left: 30px;
+    padding-top: 20px;
+    background-color: white;
+    margin: auto;
+    width: 15%;
+    border-right: 0.5px solid #8C92A5;
+    height: max-content;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+   
+}
+
+.profile {
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+    justify-content: left;
+    align-items: center;
+   
+}
+
 #image-profile{
     max-width: 100%;
     max-height: 100%;
@@ -12,38 +36,40 @@ body{
 }
 .circular-square { 
    background-size: contain;
-   position: relative; 
    width: 50px; 
    height: 50px; 
    overflow: hidden; 
    border-radius: 50%; 
+   float: left;
 } 
 
-.profile {
-    padding: 5px;
-    margin: 10px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-   
-}
-
-.child-profile {
+.title-profile {
     margin-left: 10px;
+    float: left;
+    font-family: Arial;
+    font-weight: 600;
+    font-size: 14px;
+    color: #1A2238;
 }
 
 .nav{
     margin: 20px;
-    margin-top: 60px;
+    margin-top: 50px;
+}
+
+.nav-item{
+    margin-bottom: 60px;
 }
 
 .nav-title{
     color: #5484E9;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .nav-element{
     list-style-type: none;
-    display: inline-block;
     padding: 0;
 }
 
@@ -55,41 +81,36 @@ body{
     color: #8C92A5
 }
 
-
 .nav-icon{
     width: 20px; 
     height: 20px;
     margin-right: 15px;
 }
 
-.child-container {
-    flex-grow: 1;
+a{
+  color: #8C92A5;
+  text-decoration: none;
+  font-family: Arial;
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.menu{
-    padding-left: 3%;
-    padding-bottom: 60px;
-    background-color: white;
-    max-width: 20%;
-    border-right: 1px solid #8C92A5;
-    max-height: 100%;
-    justify-content: left;
-    align-items: center;
+a:hover { 
+    color: #5484E9;
+ }
+
+.main{
+    display: block;
+    float: right;
 }
-
-
 
 .header{
     height: 100px;
     background-color: white;
-    border-bottom: 1px solid #8C92A5;
-    position:relative;
-    display: flex;
-   
+    border-bottom: 0.5px solid #8C92A5;
 }
 
 .search-header{
-   
    top: 50%;
    transform: translateY(-50%);
    width: 20px; 
@@ -103,9 +124,8 @@ body{
     top: 50%;
     transform: translateY(-50%);
     margin-right: 3%;
-    right: 0;
-    position: absolute;
-  
+    float: right;
+    position: relative;
 
 }
 
@@ -113,5 +133,107 @@ body{
     width: 20px; 
     height: 20px;
     margin-right: 15px;
+}
+
+.principal{
+    height: 700px;
+    background-color: #F5F7FB;
+    
+}
+
+.title-of-main{
+    padding-top: 50px;
+    margin-right: 3%;
+    position: relative;
+   
+}
+
+#title{
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 500;
+    color: #1A2238;
+    top: 50%;
+    float: left;
+    position: relative;
+    padding-left: 3%;
+}
+
+.button {
+    font-family: Arial;
+    font-weight: 600;
+    border: none;
+    color: white;
+    background-color: #5484E9;
+    border-radius: 25px;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+    top: 50%;
+    position: relative;
+    
+  }
+
+.infos{
+    margin-top: 60px;
+    margin-left: 3%;
+    display: block;
+    float: left;
+    
+}
+
+.general-component{
+    background-color: white;
+    height: 150px;
+    width: 22.5%;
+    border: 0.5px solid #8C92A5;
+    float: left;
+    position: relative;
+    margin-right: 30px;
+    
+}
+
+.component{
+    position: absolute;
+    text-align: left;
+    padding-left: 50px;
+    top: 50%;
+    margin: auto;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-component{
+    float: left;
+    position: relative;
+    margin-right: 20px;
+    width: 30px; 
+    height: 30px;
+    padding-top: 10px;
+}
+
+.texts{
+    float: left;
+    position: relative;
+}
+
+.number{
+    font-size: 30px;
+    font-family: Arial;
+    font-weight: 500;
+    color: #1A2238;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+p{
+    margin: 0;
+    font-size: 12px;
+    font-family: Arial;
+    font-weight: 400;
+    color: #8C92A5;
 }
 
