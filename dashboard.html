@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
     <head>
+        <meta charset="utf-8" />
         <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen" /> 
+        <script src="echarts.js"></script>
     </head>
     <body>
         <div class= "container">
-            <div class="child-container menu">
+            <div class="menu">
                     <div class= "profile" >
                         <img id= "image-profile"  class= "circular-square" class= "child-profile"  src="perfil.jpg" alt="Perfil">
-                    
-                        <h3 class="child-profile">Amanda King</h3>
+                        <h3 class="title-profile">Amanda King</h3>
                     </div>
                     <nav class="nav">
-                        <h3 class= "nav-title">DISCOVER</h3>
-                        <ul class= "nav-element">
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/star.png" alt="Star"> <a href="#">Featured</a></li>
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/heart.png" alt="Heart"> <a href="#">Most Popular</a></li>
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/tag.png" alt="Tag"><a href="#"> Categories</a></li>
-                            <li class= "child-nav-element">  <img class= "nav-icon" src="icons/shuffle.png" alt="Shuffle"><a href="#"> Shuffle</a></li>
-                        </ul>
-
-                        <h3 class= "nav-title">TOOLS</h3>
-                        <ul class= "nav-element">
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/search.png" alt="Search"> <a href="#">Search</a></li>
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/plus.png" alt="Plus"> <a href="#">Create Portfolio</a></li>
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/message.png" alt="Messages"><a href="#"> Messages</a></li>
-                        </ul>
-
-                        <h3 class= "nav-title">FINANCE</h3>
-                        <ul class= "nav-element">
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/arrowRight.png" alt="Arrow"> <a href="#">Buy</a></li>
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/arrowLeft.png" alt="ArrowLeft"> <a href="#">Sell</a></li>
-                            <li class= "child-nav-element"> <img class= "nav-icon" src="icons/money.png" alt="Money"> <a href="#">Invoices</a></li>
-                            <li class= "child-nav-element">  <img class= "nav-icon" src="icons/wallet.png" alt="Wallet"> <a href="#"> Wallet</a></li>
-                        </ul>
+                        <div class="nav-item">
+                            <h3 class= "nav-title">DISCOVER</h3>
+                            <ul class= "nav-element">
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/star.png" alt="Star"> <a href="#">Featured</a></li>
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/heart.png" alt="Heart"> <a href="#">Most Popular</a></li>
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/tag.png" alt="Tag"><a href="#"> Categories</a></li>
+                                <li class= "child-nav-element">  <img class= "nav-icon" src="icons/shuffle.png" alt="Shuffle"><a href="#"> Shuffle</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-item">
+                            <h3 class= "nav-title">TOOLS</h3>
+                            <ul class= "nav-element">
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/search.png" alt="Search"> <a href="#">Search</a></li>
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/plus.png" alt="Plus"> <a href="#">Create Portfolio</a></li>
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/message.png" alt="Messages"><a href="#"> Messages</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-item">
+                            <h3 class= "nav-title">FINANCE</h3>
+                            <ul class= "nav-element">
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/arrowRight.png" alt="Arrow"> <a href="#">Buy</a></li>
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/arrowLeft.png" alt="ArrowLeft"> <a href="#">Sell</a></li>
+                                <li class= "child-nav-element"> <img class= "nav-icon" src="icons/money.png" alt="Money"> <a href="#">Invoices</a></li>
+                                <li class= "child-nav-element">  <img class= "nav-icon" src="icons/wallet.png" alt="Wallet"> <a href="#"> Wallet</a></li>
+                            </ul>
+                        </div>
                     </nav>   
             </div>
-            <div class="child-container header">
-                <img class= "search-header" src="icons/search.png" alt="Search"> 
-                <div class="header-right-options">
-                    <img class= "icon-header right" src="icons/bell.png" alt="Bell"> 
-                    <img class= "icon-header right" src="icons/power.png" alt="Power">  
-                </div>
+            <div clas="main">
+                    <div class="header">
+                        <img class= "search-header" src="icons/search.png" alt="Search"> 
+                        <div class="header-right-options">
+                            <img class= "icon-header right" src="icons/bell.png" alt="Bell"> 
+                            <img class= "icon-header right" src="icons/power.png" alt="Power">  
+                        </div>
+                    </div>
+                    <div class="principal"> 
+                        <main>
+                            <div class="title-of-main">
+                                <h1 id="title">Societe Generale</h1>
+                                <button class="button">SAVE SEARCH</button>
+                            </div>
+                            <section class="infos">
+                                <div class="general-component">
+                                    <div class="component">
+                                        <img class= "icon-component" src="icons/graphic.png" alt="graphic">
+                                        <div class="texts">
+                                            <h1 class="number">44.51</h1>
+                                            <p>Current price ($)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="general-component">
+                                    <div class="component">
+                                        <img class= "icon-component" src="icons/article.png" alt="article">
+                                        <div class="texts">
+                                            <h1 class="number">132</h1>
+                                            <p>Related articles</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="general-component">
+                                    <div class="component">
+                                        <img class= "icon-component" src="icons/person.png" alt="person">
+                                        <div class="texts">
+                                            <h1 class="number">18</h1>
+                                            <p>Key executives</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="general-component">
+                                    <div class="component">
+                                        <img class= "icon-component" src="icons/bubble.png" alt="bubble">
+                                        <div class="texts">
+                                            <h1 class="number">24</h1>
+                                            <p>Conversations</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                           
+                        </main>
+                    </div>
             </div>
         </div>
         
