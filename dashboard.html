@@ -93,7 +93,137 @@
                                     </div>
                                 </div>
                             </section>
+                            <div class="box-chart">
+                                <div id="charts" ref="chart" >
+                                    <script type="text/javascript">
+                                    // Initialize the echarts instance based on the prepared dom
+                                        var myChart = echarts.init(document.getElementById('charts'));
+                                       
+                                        // Specify the configuration items and data for the chart
+                                        var option;
+            
+                                        option = {
+                                            tooltip: {
+                                            trigger: 'axis',
+                                            },
+                                        grid: {
+                                            left: '3%',
+                                            right: '4%',
+                                            bottom: '3%',
+                                            containLabel: true
+                                        },
+                                        xAxis: [
+                                            {
+                                            type: 'category',
+                                            boundaryGap: false,
+                                            data: ['APR', '', 'MAY', '', 'JUN', '', 'JUL', '', 'AUG', '', 'SEP'],
+                                            axisLabel: {
+                                                inside: false,
+                                                margin: 20,
+                                            }
+                                            }, 
+                                        ],
+                                        yAxis: [
+                                            {
+                                            type: 'value',
+                                            min: 30,
+                                            max: 50,
+                                            axisLabel: {
+                                                formatter: '{value} $',
+                                            },
+                                            right: '30',
+                                           
+                                            }
+                                        ],
+                                        series: [
+                                            {
+                                            name: 'Price',
+                                            type: 'line',
+                                            smooth: true,
+                                            lineStyle: {
+                                                color: '#5484E9',
+                                            },
+                                            data: [38, 37, 41, 38, 42, 41, 45, 42, 48, 43, 44],
+                                            areaStyle: {
+                                                color: '#F5F8FF',
+                                            },
+
+                                            }
+
+                                        ]
+                                        };
+            
+                                        // Display the chart using the configuration items and data just specified.
+                                        myChart.setOption(option);
+                                        
+                                    </script> 
+                                </div>
                            
+                                <div id="pie" ref="pie" >
+                                    <script type="text/javascript">
+                                        var myCharts = echarts.init(document.getElementById('pie'));
+                                        var colorPalette = ['#4D84FE','#FC5361', '#FFC004']
+                                        var option;
+
+                                        option = {
+                                        title: {
+                                            text: 'EXPERT ADVICE',
+                                            left: 'center',
+                                            top: '5%',
+                                            textStyle: {
+                                                color: '#8C92A5',
+                                                fontSize: '16',
+                                                fontWeight: 'semibold',
+                                            },
+                                        },
+                                        tooltip: {
+                                            trigger: 'item'
+                                        },
+                                        legend: {
+                                            top: '90%',
+                                            left: 'center',
+                                            fontSize: '30'
+                                        },
+                                        series: [
+                                            {
+                                            name: 'Valores',
+                                            type: 'pie',
+                                            radius: ['45%', '70%'],
+                                            avoidLabelOverlap: false,
+                                            itemStyle: {
+                                                borderRadius: 10,
+                                                borderColor: '#fff',
+                                                borderWidth: 15
+                                            },
+                                            color: colorPalette,
+                                            label: {
+                                                show: false,
+                                                position: 'center'
+                                            },
+                                            emphasis: {
+                                                label: {
+                                                show: true,
+                                                fontSize: 40,
+                                                fontWeight: 'bold',
+                                                color: '#8C92A5'
+                                                }
+                                            },
+                                            labelLine: {
+                                                show: true
+                                            },
+                                            data: [
+                                                { value: 30, name: 'Buy' },
+                                                { value: 45, name: 'Keep' },
+                                                { value: 25, name: 'Sell' }
+                                            ]
+                                            }
+                                        ]
+                                        };
+
+                                        myCharts.setOption(option);
+                                    </script> 
+                                </div>
+                            </div>
                         </main>
                     </div>
             </div>

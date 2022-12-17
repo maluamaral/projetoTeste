@@ -1,5 +1,6 @@
-body{
+html, body {
   margin: 0;
+  height: 100%;
 }
 .container{
     display: block;
@@ -7,13 +8,13 @@ body{
 }
 .menu{
     float: left;
-    padding-left: 30px;
+    padding-left: 2%;
     padding-top: 20px;
     background-color: white;
     margin: auto;
     width: 15%;
-    border-right: 0.5px solid #8C92A5;
-    height: max-content;
+    border-right: 0.5px solid #E5E7EB;
+    height:100vh;
     justify-content: left;
     align-items: center;
     position: relative;
@@ -65,7 +66,7 @@ body{
     color: #5484E9;
     font-family: Arial;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .nav-element{
@@ -107,7 +108,7 @@ a:hover {
 .header{
     height: 100px;
     background-color: white;
-    border-bottom: 0.5px solid #8C92A5;
+    border-bottom: 0.5px solid #E5E7EB;
 }
 
 .search-header{
@@ -136,8 +137,9 @@ a:hover {
 }
 
 .principal{
-    height: 700px;
+    height: 900px;
     background-color: #F5F7FB;
+    height:100vh;
     
 }
 
@@ -177,10 +179,15 @@ a:hover {
     
   }
 
+.button:hover{
+    padding: 17px 42px;
+}
+
 .infos{
     margin-top: 60px;
     margin-left: 3%;
     display: block;
+    width: 78%;
     float: left;
     
 }
@@ -189,7 +196,7 @@ a:hover {
     background-color: white;
     height: 150px;
     width: 22.5%;
-    border: 0.5px solid #8C92A5;
+    border: 0.5px solid #E5E7EB;
     float: left;
     position: relative;
     margin-right: 30px;
@@ -199,7 +206,8 @@ a:hover {
 .component{
     position: absolute;
     text-align: left;
-    padding-left: 50px;
+    padding-left: 15%;
+    padding-right: 15%;
     top: 50%;
     margin: auto;
     -ms-transform: translateY(-50%);
@@ -235,5 +243,35 @@ p{
     font-family: Arial;
     font-weight: 400;
     color: #8C92A5;
+}
+
+.box-chart{
+    margin-top: 60px;
+    margin-left: 3%;
+    width: 75%;
+    height: 400px;
+    display: inline-block;
+    background-color: white;
+    border: 0.5px solid #E5E7EB;
+
+}
+
+#charts{
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    height: 90%;
+    margin-left: 3%;
+    position: relative;
+    display: inline-block;
+}
+
+#pie{
+    width: 30%;
+    height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+    float: right;
+    position: relative;
 }
 
